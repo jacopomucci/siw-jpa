@@ -88,3 +88,4 @@ local.properties
 *.zip
 *.tar.gz
 *.rar
+/siw-jpa-es1/
