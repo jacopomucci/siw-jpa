@@ -1,6 +1,7 @@
-package products;
+package it.uniroma3.siw;
 
 import org.junit.*;
+
 import static org.junit.Assert.*;
 import javax.persistence.*;
 import java.util.List;
