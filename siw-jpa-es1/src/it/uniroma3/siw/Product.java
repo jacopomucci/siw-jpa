@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.ArrayList;
 
 @Entity
-@Table(name = "products_table")
 @NamedQuery(name = "findAllProducts", query = "SELECT p FROM Product p")
 
 public class Product {

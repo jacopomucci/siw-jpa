@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "providers_table")
 public class Provider {
 
 	@Id
@@ -20,6 +19,8 @@ public class Provider {
 	@Column(nullable = false)
 	@ManyToMany
 	private List<Product> products;
+	@ManyToOne
+	private Address address;
 	
 	
 	public Provider() {
@@ -33,6 +34,10 @@ public class Provider {
 	
 	public void addProduct(Product product) {
 		products.add(product);
+	}
+	
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 	
 }
