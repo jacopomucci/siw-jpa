@@ -1,6 +1,8 @@
 package it.uniroma3.siw;
 
 import javax.persistence.*;
+import java.util.List;
+import java.util.ArrayList;
 
 @Entity
 @Table(name = "products_table")
@@ -19,6 +21,9 @@ public class Product {
 	private String description;
 	@Column(nullable = false)
 	private String code;
+	@ManyToMany(mappedBy = "products")
+	private List<Provider> providers;
+	
 	
 	public Product() {
 		
@@ -29,6 +34,7 @@ public class Product {
 		this.price = price;
 		this.description = description;
 		this.code = code;
+		this.providers = new ArrayList<Provider>();
 	}
 	
 	public long getId() {
