@@ -22,10 +22,9 @@ public class OrderLine {
 		
 	}
 	
-	public OrderLine(double price, int quantity, Product product, Order order) {
+	public OrderLine(double price, int quantity, Product product) {
 		this.price = price;
 		this.quantity = quantity;
 		this.product = product;
-		this.order = order;
 	}
 }

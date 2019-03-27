@@ -27,8 +27,9 @@ public class Provider {
 		
 	}
 	
-	public Provider(String name) {
+	public Provider(String name, Address address) {
 		this.name = name;
+		this.address = address;
 		this.products = new ArrayList<Product>();
 	}
 	

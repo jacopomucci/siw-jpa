@@ -20,7 +20,7 @@ public class Customer {
 	private LocalDate registrationDate;
 	@OneToMany(mappedBy = "customer")
 	private List<Order> orders;
-	@OneToOne
+	@OneToOne(cascade = {CascadeType.PERSIST})
 	private Address address;
 	
 	public Customer() {
@@ -33,7 +33,6 @@ public class Customer {
 		this.address = address;
 		this.orders = new ArrayList<Order>();
 	}
-	
 	
 	public List<Order> getOrders() {
 		return this.orders;
