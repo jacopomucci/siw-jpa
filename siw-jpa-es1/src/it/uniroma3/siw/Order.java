@@ -2,7 +2,6 @@ package it.uniroma3.siw;
 
 import javax.persistence.*;
 import java.time.*;
-import java.util.List;
 
 @Entity
 @Table(name = "orders")

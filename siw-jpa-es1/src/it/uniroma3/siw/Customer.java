@@ -20,7 +20,7 @@ public class Customer {
 	private LocalDate registrationDate;
 	@OneToMany(mappedBy = "customer")
 	private List<Order> orders;
-	@ManyToOne
+	@OneToOne
 	private Address address;
 	
 	public Customer() {
@@ -32,6 +32,11 @@ public class Customer {
 		this.lastName = lastName;
 		this.address = address;
 		this.orders = new ArrayList<Order>();
+	}
+	
+	
+	public List<Order> getOrders() {
+		return this.orders;
 	}
 
 	
