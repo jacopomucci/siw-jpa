@@ -3,13 +3,13 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
              version="2.0">
              
-	<persistence-unit name="products-unit" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="main-unit" transaction-type="RESOURCE_LOCAL">
 		<class>products.Product</class>
 		<properties>
 		<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 		<property name="javax.persistence.jdbc.user" value="postgres" />
 		<property name="javax.persistence.jdbc.password" value="admin" />
-		<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/products"
+		<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/siw-es1"
 		/>
 		<!-- Hibernate properties -->
 		<property name="hibernate.show_sql" value="true" />
@@ -19,13 +19,13 @@
 		</properties>
 	</persistence-unit>
 	
-	<persistence-unit name="products-unit-test" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="main-unit-test" transaction-type="RESOURCE_LOCAL">
 		<class>products.Product</class>
 		<properties>
 		<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 		<property name="javax.persistence.jdbc.user" value="postgres" />
 		<property name="javax.persistence.jdbc.password" value="admin" />
-		<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/products"
+		<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/siw-es1"
 		/>
 		<!-- Hibernate properties -->
 		<property name="hibernate.show_sql" value="true" />
