@@ -19,7 +19,7 @@ public class Provider {
 	@Column(nullable = false)
 	@ManyToMany
 	private List<Product> products;
-	@ManyToOne
+	@ManyToOne(cascade= {CascadeType.PERSIST})
 	private Address address;
 	
 	

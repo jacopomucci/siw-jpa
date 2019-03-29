@@ -14,14 +14,18 @@ public class Order {
 	private long id;
 	@Column
 	private LocalDateTime creationTime;
-	@ManyToOne
+	@ManyToOne(cascade= {CascadeType.PERSIST})
 	private Customer customer;
-	@OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "order")
+	@OneToMany(mappedBy = "order")
 	private List<OrderLine> orderlines;
 	
+	public Order() {
+		
+	}
 	
 	public Order(Customer customer) {
 		this.customer = customer;
+		this.creationTime = LocalDateTime.now();
 		this.orderlines = new ArrayList<OrderLine>();
 	}
 	

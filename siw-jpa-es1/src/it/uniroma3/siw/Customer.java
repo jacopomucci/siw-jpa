@@ -31,6 +31,7 @@ public class Customer {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.address = address;
+		this.registrationDate = LocalDate.now();
 		this.orders = new ArrayList<Order>();
 	}
 	

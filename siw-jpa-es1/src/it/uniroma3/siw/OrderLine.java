@@ -1,6 +1,8 @@
 package it.uniroma3.siw;
 
 import javax.persistence.*;
+import java.util.List;
+import java.util.ArrayList;
 
 @Entity
 @Table(name = "order_line")
@@ -22,9 +24,10 @@ public class OrderLine {
 		
 	}
 	
-	public OrderLine(double price, int quantity, Product product) {
+	public OrderLine(double price, int quantity, Product product, Order order) {
 		this.price = price;
 		this.quantity = quantity;
 		this.product = product;
+		this.order = order;
 	}
 }
