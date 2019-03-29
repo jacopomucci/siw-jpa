@@ -14,7 +14,7 @@ public class ProductTest {
 	
 	@BeforeClass
 	public static void initEntityManager() throws Exception {
-		emf = Persistence.createEntityManagerFactory("products-unit-test");
+		emf = Persistence.createEntityManagerFactory("main-unit-test");
 		em = emf.createEntityManager();
 	}
 	

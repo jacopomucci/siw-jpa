@@ -5,7 +5,7 @@ import javax.persistence.*;
 public class Main {
 	public static void main(String[] args) {
 		
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("products-unit");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("main-unit");
 		EntityManager em = emf.createEntityManager();
 		
 		Address address1 = new Address("Via Torcervara");
@@ -35,7 +35,6 @@ public class Main {
 		em.persist(order1);
 		em.persist(order2);
 		em.persist(customer1);
-	
 		
 		tx.commit();
 		
