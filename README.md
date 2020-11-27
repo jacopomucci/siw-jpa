@@ -1,1 +1,1 @@
-# siw-jpa
+# Esercizi introduttivi su JPA/Hibernate
